@@ -1,0 +1,21 @@
+{
+  "name": "nggrid-library",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  },
+  "main": "bundles/nggrid-library.umd.js",
+  "module": "fesm5/nggrid-library.js",
+  "es2015": "fesm2015/nggrid-library.js",
+  "esm5": "esm5/nggrid-library.js",
+  "esm2015": "esm2015/nggrid-library.js",
+  "fesm5": "fesm5/nggrid-library.js",
+  "fesm2015": "fesm2015/nggrid-library.js",
+  "typings": "nggrid-library.d.ts",
+  "metadata": "nggrid-library.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
