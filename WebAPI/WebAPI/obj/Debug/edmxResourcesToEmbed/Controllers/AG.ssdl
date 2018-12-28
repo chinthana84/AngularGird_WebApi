@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Users.dbo.Test' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Warranty">
+    <Key>
+      <PropertyRef Name="WarrantyID" />
+    </Key>
+    <Property Name="WarrantyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" />
+  </EntityType>
+  <EntityContainer Name="UsersModelStoreContainer">
+    <EntitySet Name="Warranty" EntityType="Self.Warranty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Test" EntityType="Self.Test" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Test].[ID] AS [ID], 
+    [Test].[FirstName] AS [FirstName], 
+    [Test].[LastName] AS [LastName]
+    FROM [dbo].[Test] AS [Test]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

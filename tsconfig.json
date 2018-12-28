@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "nggrid-library": [
+        "dist/nggrid-library"
+      ],
+      "nggrid-library/*": [
+        "dist/nggrid-library/*"
+      ]
+    }
   }
 }
